@@ -1,3 +1,4 @@
+import Bebida from '../bebida/Bebida';
 import Platillo from '../platillo/Platillo';
 
 import classes from './CategoryItems.module.scss';
@@ -13,7 +14,13 @@ const CategoryItems = ({ items, bebidas }) => {
     );
   }
 
-  return <div>{bebidas.map((bebida) => bebida.subCategoria)}</div>;
+  return (
+    <div className={classes.bebidas}>
+      {bebidas.map((bebida) => (
+        <Bebida key={bebida.nombre} bebida={bebida} />
+      ))}
+    </div>
+  );
 };
 
 export default CategoryItems;

@@ -1,0 +1,9 @@
+.card {
+  background: url('/images/card-background.png');
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    column-gap: 2rem;
+    padding-top: 2rem;
+  }
+}

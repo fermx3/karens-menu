@@ -1,12 +1,9 @@
 import Head from 'next/head';
-import { Inter } from 'next/font/google';
 import { MENU_KARENS } from '../data/menu';
 import Header from '@/components/header/Header';
 import { getMenuCategories } from '@/utils/db-utils';
 import Menu from '@/components/menu/Menu';
 import { Typography } from '@mui/material';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({ karensMenuCategories, karensMenu }) {
   return (
@@ -28,7 +25,7 @@ export default function Home({ karensMenuCategories, karensMenu }) {
       <main>
         <Menu karensMenu={karensMenu} />
       </main>
-      <footer style={{ textAlign: 'center' }}>
+      <footer style={{ textAlign: 'center', color: 'aliceblue' }}>
         <Typography variant='overline' style={{ display: 'block' }}>
           Todos nuestros precios están en pesos mexicanos MXN
         </Typography>
