@@ -6,8 +6,7 @@ const PlatilloVariantes = ({ variantes }) => {
   return (
     <div className={classes.variantes}>
       {variantes.map((variante) => (
-        <Paper
-          elevation={0}
+        <div
           key={variante.nombre}
           className={`${classes.variante} ${
             variante.desc && classes.varianteConDesc
@@ -26,7 +25,7 @@ const PlatilloVariantes = ({ variantes }) => {
           <div>
             <Typography variant='button'>{`$${variante.precio}`}</Typography>
           </div>
-        </Paper>
+        </div>
       ))}
     </div>
   );

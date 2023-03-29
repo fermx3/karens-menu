@@ -298,8 +298,8 @@ export const MENU_KARENS = [
             precio: 480,
           },
           {
-            nombre: 'Mixto',
-            name: 'Mixed',
+            nombre: 'Mixto con Camarón',
+            name: 'Mixed with Shrimp',
             desc: 'Camarón, Arrachera, Pollo',
             descEng: 'Shrimp, Flank Steak, Chicken',
             precio: 460,
@@ -345,8 +345,8 @@ export const MENU_KARENS = [
             precio: 479,
           },
           {
-            nombre: 'Mixto',
-            name: 'Mixed',
+            nombre: 'Mixto con Camarón',
+            name: 'Mixed with Shrimp',
             desc: 'Camarón, Arrachera, Pollo',
             descEng: 'Shrimp, Flank Steak, Chicken',
             precio: 459,
