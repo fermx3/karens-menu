@@ -1,4 +1,11 @@
-import { Card, CardContent, CardMedia, Paper, Typography } from '@mui/material';
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Paper,
+  Skeleton,
+  Typography,
+} from '@mui/material';
 import PlatilloVariantes from '../platillo-variantes/PlatilloVariantes';
 
 import classes from './Platillo.module.scss';
@@ -17,10 +24,16 @@ const Platillo = ({
 }) => {
   return (
     <Card className={classes.card}>
-      {slug && (
+      {slug ? (
         <CardMedia
           sx={{ height: 140 }}
           image={`/images/karens-menu/${slug}.jpg`}
+          title={nombre}
+        />
+      ) : (
+        <CardMedia
+          sx={{ height: 140 }}
+          image={`/images/karens-menu/placeholder.png`}
           title={nombre}
         />
       )}
