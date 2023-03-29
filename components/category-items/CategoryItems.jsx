@@ -1,9 +1,11 @@
 import Platillo from '../platillo/Platillo';
 
+import classes from './CategoryItems.module.scss';
+
 const CategoryItems = ({ items, bebidas }) => {
   if (items) {
     return (
-      <div>
+      <div className={classes.categoryItems}>
         {items.map((item) => (
           <Platillo key={item.nombre} platillo={item} />
         ))}

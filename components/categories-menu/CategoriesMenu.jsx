@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import Link from 'next/link';
 
 import classes from './CategoriesMenu.module.scss';
@@ -8,10 +9,16 @@ const CategoriesMenu = ({ menuCategories }) => {
       <ul>
         {menuCategories.map((category) => (
           <li key={category.categoria}>
-            <Link href={`/#${category.categoria}`}>
+            <Button
+              sx={{ height: '45px' }}
+              variant='contained'
+              href={`/#${category.categoria}`}
+            >
               <h3>{category.categoria}</h3>
-              <h4>{category.category}</h4>
-            </Link>
+              {category.category && (
+                <h3 className={classes.english}>{category.category}</h3>
+              )}
+            </Button>
           </li>
         ))}
       </ul>

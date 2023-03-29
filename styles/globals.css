@@ -29,9 +29,27 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
+  background: url('/images/background.png');
+  background-size: contain;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.MuiPaper-root {
+  background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: aliceblue;
+}
+
+.MuiAlert-message,
+MuiPaper-root > .MuiAlert-icon {
+  color: aliceblue;
 }

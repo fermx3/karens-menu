@@ -1,20 +1,32 @@
+import { Paper, Typography } from '@mui/material';
+
+import classes from './PlatilloVariantes.module.scss';
+
 const PlatilloVariantes = ({ variantes }) => {
   return (
-    <div>
+    <div className={classes.variantes}>
       {variantes.map((variante) => (
-        <div key={variante.nombre}>
+        <Paper
+          elevation={0}
+          key={variante.nombre}
+          className={`${classes.variante} ${
+            variante.desc && classes.varianteConDesc
+          }`}
+        >
           <div>
-            <h6>{variante.nombre}</h6>
-            <h6>{variante.name}</h6>
+            <Typography variant='h6'>{variante.nombre}</Typography>
+            <Typography varian='subtitle1'>{variante.name}</Typography>
           </div>
+          {variante.desc && (
+            <div>
+              <Typography variant='body2'>{variante.desc}</Typography>
+              <Typography variant='body2'>{variante.descEng}</Typography>
+            </div>
+          )}
           <div>
-            <p>{variante.desc}</p>
-            <p>{variante.descEng}</p>
+            <Typography variant='button'>{`$${variante.precio}`}</Typography>
           </div>
-          <div>
-            <p>{variante.precio}</p>
-          </div>
-        </div>
+        </Paper>
       ))}
     </div>
   );

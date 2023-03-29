@@ -1,0 +1,9 @@
+.variantes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 1rem 2rem;
+
+  .varianteConDesc {
+    grid-column: span 2;
+  }
+}

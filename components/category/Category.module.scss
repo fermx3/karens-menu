@@ -1,0 +1,33 @@
+.categoria {
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  margin: 4rem auto;
+
+  .header {
+    background: transparent;
+    text-align: center;
+
+    .titleEng {
+      font-size: large;
+    }
+  }
+
+  .categoriaItems {
+    grid-column: span 4;
+    flex-grow: 1;
+  }
+
+  .notas {
+    display: flex;
+    width: 90vw;
+    padding: 0 1rem;
+    span {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}

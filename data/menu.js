@@ -9,6 +9,7 @@ export const MENU_KARENS = [
         descEng:
           'Avocado, onion, tomato, coriander, lettuce and cheese mixed together to create a traditional mexican dish.',
         precio: 179,
+        slug: 'guacamole',
       },
       {
         nombre: 'Nachos',
@@ -16,6 +17,7 @@ export const MENU_KARENS = [
         descEng:
           'Crunchy and hot tortilla chips with gouda cheese, cheddar cheese, jalapeños, pico de gallo and beans.',
         precio: 190,
+        slug: 'nachos',
         variantes: [
           {
             nombre: 'Pollo',
@@ -23,7 +25,7 @@ export const MENU_KARENS = [
             precio: 200,
           },
           {
-            nombre: 'Arrechera',
+            nombre: 'Arrachera',
             name: 'Flank Steak',
             precio: 250,
           },

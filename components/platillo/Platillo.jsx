@@ -1,23 +1,70 @@
+import { Card, CardContent, CardMedia, Paper, Typography } from '@mui/material';
 import PlatilloVariantes from '../platillo-variantes/PlatilloVariantes';
 
+import classes from './Platillo.module.scss';
+
 const Platillo = ({
-  platillo: { nombre, name, desc, descEng, precio, variantes },
+  platillo: {
+    nombre,
+    name,
+    desc,
+    descEng,
+    precio,
+    slug,
+    variantes,
+    adicionales,
+  },
 }) => {
   return (
-    <div>
-      <div>
-        <h5>{nombre}</h5>
-        {name && <h6>{name}</h6>}
-      </div>
-      <div>
-        <p>{desc}</p>
-        <p>{descEng}</p>
-      </div>
-      <div>
-        <p>{precio}</p>
-      </div>
-      {variantes && <PlatilloVariantes variantes={variantes} />}
-    </div>
+    <Card className={classes.card}>
+      {slug && (
+        <CardMedia
+          sx={{ height: 140 }}
+          image={`/images/karens-menu/${slug}.jpg`}
+          title={nombre}
+        />
+      )}
+      <CardContent>
+        <div className={classes.header}>
+          <Typography variant='h5'>{nombre}</Typography>
+          {name && <Typography variant='subtitle1'>{name}</Typography>}
+        </div>
+        {adicionales &&
+          adicionales.map((adicional) => (
+            <Paper
+              elevation={0}
+              key={adicional.name}
+              className={classes.adicionales}
+            >
+              <Typography variant='subtitle2' sx={{ fontWeight: 400 }}>
+                {adicional.nombre}
+              </Typography>
+              <Typography variant='subtitle2' sx={{ fontWeight: 400 }}>
+                {adicional.name}
+              </Typography>
+              <Typography
+                sx={{ fontWeight: 500 }}
+                varian='button'
+              >{`$${adicional.precio}`}</Typography>
+            </Paper>
+          ))}
+        {desc && (
+          <div className={classes.body}>
+            <Typography variant='body1'>{desc}</Typography>
+            <Typography variant='body2'>{descEng}</Typography>
+          </div>
+        )}
+        {precio && (
+          <div className={classes.precio}>
+            <Typography
+              sx={{ fontWeight: 500 }}
+              varian='button'
+            >{`$${precio}`}</Typography>
+          </div>
+        )}
+        {variantes && <PlatilloVariantes variantes={variantes} />}
+      </CardContent>
+    </Card>
   );
 };
 

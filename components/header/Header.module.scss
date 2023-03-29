@@ -3,9 +3,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5rem 1rem;
+  margin: 4rem auto;
+  padding: 1rem;
+
+  .img {
+    margin-bottom: 3rem;
+    height: 20vh;
+    width: 90%;
+    position: relative;
+
+    img {
+      object-fit: contain;
+    }
+  }
 
   .headerTitle {
     padding-bottom: 2rem;
+    text-align: center;
   }
 }
