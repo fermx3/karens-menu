@@ -3,7 +3,8 @@ import { MENU_KARENS } from '../data/menu';
 import Header from '@/components/header/Header';
 import { getMenuCategories } from '@/utils/db-utils';
 import Menu from '@/components/menu/Menu';
-import { Typography } from '@mui/material';
+import { IconButton, Typography } from '@mui/material';
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 
 export default function Home({ karensMenuCategories, karensMenu }) {
   return (
@@ -16,10 +17,6 @@ export default function Home({ karensMenuCategories, karensMenu }) {
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
-        <link
-          rel='stylesheet'
-          href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
-        />
       </Head>
       <Header
         subtitle='Menú'
@@ -28,6 +25,14 @@ export default function Home({ karensMenuCategories, karensMenu }) {
       />
       <main>
         <Menu karensMenu={karensMenu} />
+        <IconButton
+          href='/'
+          sx={{ position: 'fixed', bottom: '10px', right: '10px' }}
+          aria-label='regresar al inicio'
+          size='large'
+        >
+          <ArrowCircleUpIcon color='white' />
+        </IconButton>
       </main>
       <footer style={{ textAlign: 'center', color: 'aliceblue' }}>
         <Typography variant='overline' style={{ display: 'block' }}>

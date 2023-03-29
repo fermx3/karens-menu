@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material';
 import Image from 'next/image';
 import CategoriesMenu from '../categories-menu/CategoriesMenu';
+import MobileMenu from '../mobile-menu/MobileMenu';
 
 import classes from './Header.module.scss';
 
@@ -19,6 +20,7 @@ const Header = ({ title, subtitle, menuCategories }) => {
         </Typography>
       </div>
       <CategoriesMenu menuCategories={menuCategories} />
+      {/* <MobileMenu /> */}
     </header>
   );
 };
