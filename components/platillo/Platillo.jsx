@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Paper,
-  Skeleton,
-  Typography,
-} from '@mui/material';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import PlatilloVariantes from '../platillo-variantes/PlatilloVariantes';
 
 import classes from './Platillo.module.scss';
@@ -44,11 +37,7 @@ const Platillo = ({
         </div>
         {adicionales &&
           adicionales.map((adicional) => (
-            <Paper
-              elevation={0}
-              key={adicional.name}
-              className={classes.adicionales}
-            >
+            <div key={adicional.name} className={classes.adicionales}>
               <Typography variant='subtitle2' sx={{ fontWeight: 400 }}>
                 {adicional.nombre}
               </Typography>
@@ -59,7 +48,7 @@ const Platillo = ({
                 sx={{ fontWeight: 500 }}
                 varian='button'
               >{`$${adicional.precio}`}</Typography>
-            </Paper>
+            </div>
           ))}
         {desc && (
           <div className={classes.body}>
