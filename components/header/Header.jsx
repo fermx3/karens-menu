@@ -14,7 +14,9 @@ const Header = ({ title, subtitle, menuCategories }) => {
         <Typography variant='subtitle1' sx={{ color: 'white' }}>
           {subtitle}
         </Typography>
-        <Typography variant='h1'>{title}</Typography>
+        <Typography variant='h2' component='h1'>
+          {title}
+        </Typography>
       </div>
       <CategoriesMenu menuCategories={menuCategories} />
     </header>

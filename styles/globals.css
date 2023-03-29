@@ -27,8 +27,3 @@ h3,
 h4 {
   color: aliceblue;
 }
-
-.MuiAlert-message,
-MuiPaper-root > .MuiAlert-icon {
-  color: aliceblue;
-}
