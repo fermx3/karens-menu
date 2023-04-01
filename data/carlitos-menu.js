@@ -32,50 +32,11 @@ export const MENU_CARLITOS = [
         ],
       },
       {
-        nombre: 'Queso Fundido',
-        name: 'Melted Cheese',
-        slug: 'queso-fundido',
-        variantes: [
-          {
-            nombre: 'Natural',
-            name: 'Plain',
-            precio: 199,
-          },
-          {
-            nombre: 'Pollo',
-            name: 'Chicken',
-            precio: 230,
-          },
-          {
-            nombre: 'Arrachera',
-            name: 'Flank Steak',
-            precio: 245,
-          },
-          {
-            nombre: 'Chuleta',
-            name: 'Pork Chop',
-            precio: 220,
-          },
-          {
-            nombre: 'Vegetales',
-            name: 'Vegetables',
-            precio: 220,
-          },
-        ],
-      },
-      {
         nombre: 'Aguachile',
         desc: 'Camarones, chiles frescos, limón, tiras de cebolla y tiras de pepino.',
         descEng:
           'Shrimp, fresh chillies, lemon, onion strips and cucumber strips.',
         precio: 385,
-      },
-      {
-        nombre: 'Aros de Calamar',
-        name: 'Squid Rings',
-        desc: 'Crujientes aros de calamar fritos y servidos con salsa tártara hecha en casa.',
-        descEng: 'Crunchy squid rings served with our home made tartar sauce.',
-        precio: 270,
       },
       {
         nombre: 'Cóctel de Camarón',
@@ -84,6 +45,7 @@ export const MENU_CARLITOS = [
         descEng:
           'Shrimp served with our cocktail sauce, onion, coriander and avocado.\nServed with tortilla chips or salty crackers.',
         precio: 330,
+        slug: 'coctel-de-camaron',
       },
       {
         nombre: 'Ceviche de Camarón',
@@ -92,6 +54,7 @@ export const MENU_CARLITOS = [
         descEng:
           'Shrimp ceviche marinated with lemon juice and pico de gallo.\nServed with tortilla chips or salty crackers.',
         precio: 330,
+        slug: 'ceviche',
       },
     ],
   },
@@ -99,13 +62,6 @@ export const MENU_CARLITOS = [
     categoria: 'Ensaladas',
     category: 'Salads',
     items: [
-      {
-        nombre: 'Mixta',
-        desc: 'Lechuga, tomate, pimiento verde, cebolla, pepino, zanahoria y aguacate.\nAcompañado de aderezo cesar o ranch.',
-        descEng:
-          'Lettuce, tomato, green pepper, onion, cucumber, carrot and avocado.\nWith cesar or ranch dressing.',
-        precio: 199,
-      },
       {
         nombre: 'César',
         desc: 'Ensalada de lechuga romana y croutons(trozos de pan tostado) y aderezo cesar.',
@@ -121,13 +77,6 @@ export const MENU_CARLITOS = [
           },
         ],
       },
-      {
-        nombre: 'Caprese',
-        desc: 'Rodajas de tomate y de mozzarella fresca, hojas de albahaca fresca, bañadas con aceite de oliva.',
-        descEng:
-          'Tomato slices and fresh mozzarella, fresh basil leaves, drizzled with olive oil.',
-        precio: 230,
-      },
     ],
   },
   {
@@ -142,13 +91,6 @@ export const MENU_CARLITOS = [
           'A light chicken broth, with vegetables, shredded chicken, lime and fried tortilla strips.',
         precio: 180,
       },
-      {
-        nombre: 'Cazuela de Mariscos',
-        desc: 'Pescado, jaiba, almeja, camarón, mejillón, calamar y queso gouda derretido.',
-        descEng:
-          'Fish, blue crab, clam, shrimp, mussel, squid and melted gouda cheese.',
-        precio: 360,
-      },
     ],
   },
   {
@@ -158,24 +100,10 @@ export const MENU_CARLITOS = [
       {
         nombre: 'Filete de Pescado',
         name: 'Fish Steak',
-        desc: 'A elegir a la plancha o al mojo de ajo. Acompañado de arroz, verduras al vapor o ensalada.',
+        desc: 'A elegir a la plancha, al mojo de ajo o empanizado. Acompañado de arroz, verduras al vapor o ensalada.',
         descEng: 'Grilled with garlic. With rice, steamed vegetables or salad.',
-        precio: 275,
-      },
-      {
-        nombre: 'Filete de Pescado Empanizado',
-        name: 'Breaded Fish Steak',
-        desc: 'Pescado empanizado. Acompañado de arroz, verduras al vapor o ensalada.',
-        descEng: 'Breaded fish. With rice, steamed vegetables or salad.',
         precio: 285,
-      },
-      {
-        nombre: 'Filete de Pescado a la Veracruzana',
-        name: 'Fish Steak Veracruzana Style',
-        desc: 'Filete de pescado, salseado en salsa de tomate frita, con cebolla, pimiento morrón y aceitunas.',
-        descEng:
-          'Fish fillet, sauced in fried tomato sauce, with onion, bell pepper and olives.',
-        precio: 295,
+        slug: 'filete-empanizado',
       },
       {
         nombre: "Camarones Karen's",
@@ -191,16 +119,7 @@ export const MENU_CARLITOS = [
         desc: 'Camarones empanizados con coco, sobre una cama de puré de papa. Acompañado de salsa de tamarindo y verduras al vapor.',
         descEng:
           'Cononut breaded shrimp, laid on top of mashed potatoes. With tamarind sauce and steamed vegetables.',
-        variantes: [
-          {
-            nombre: 'Jumbo Size',
-            precio: 679,
-          },
-          {
-            nombre: "Karen's Size",
-            precio: 459,
-          },
-        ],
+        precio: 459,
       },
       {
         nombre: 'Camarones a la Diabla Jumbo',
@@ -208,23 +127,8 @@ export const MENU_CARLITOS = [
         desc: 'Flameados en su mesa con cebolla, ajo, vino blanco, brandy, bisque de camarón y chipotle al gusto. Acompañado de fideos fritos.',
         descEng:
           'Flamed at your table with onion, garlic, white wine, brandy, shrimp bisque and chipotle to taste. With fried noodles.',
-        precio: 689,
-      },
-      {
-        nombre: 'Mar y Tierra',
-        name: 'Surf and Turf',
-        desc: 'Langosta y Rib Eye a la parrilla. Acompañado de arroz, verduras al vapor o ensalada.',
-        descEng:
-          'Grilled lobster and Rib Eye. With rice, steamed vegetables or salad.',
-        precio: 1490,
-      },
-      {
-        nombre: 'Langosta al Gusto',
-        name: 'Lobster to Taste',
-        desc: 'Al grill, al mojo de ajo, mantequilla o natural. Acompañado de arroz, verduras al vapor ensalada.',
-        descEng:
-          'Grilled, with garlic, butter or natural sauce. With rice, steamed vegetables or salad.',
-        adicionales: [{ nombre: 'Por Gramo', name: 'Per Gram', precio: 5.0 }],
+        variantes: [{ nombre: "Karen's Size", precio: 459 }],
+        slug: 'camarones-a-la-diabla',
       },
     ],
   },
@@ -245,20 +149,7 @@ export const MENU_CARLITOS = [
         name: 'BBQ Ribs',
         desc: 'Costillas de cerdo en salsa BBQ, horneadas, acompañadas con elote dulce, papa al horno y verduras al vapor.',
         precio: 390,
-      },
-      {
-        nombre: 'Tampiqueña',
-        desc: 'Falda de arrachera, enchilada roja, rajas poblanas, cebolla cambray, guacamole y frijoles.',
-        descEng:
-          'Flank steak, red enchilada, chili poblano, spring onion, guacamole and beans.',
-        precio: 399,
-      },
-      {
-        nombre: 'T-Bone (14 oz./400 gr.)',
-        desc: 'Al grill y acompañado de papa al horno o puré de papa, verduras al vapor o ensalada.',
-        descEng:
-          'Grilled and accompanied by baked potatoes or mashed potatoes, with steamed vegetables or salad.',
-        precio: 620,
+        slug: 'costillas-bbq',
       },
       {
         nombre: 'Rib Eye (14 oz./400 gr.)',
@@ -321,11 +212,6 @@ export const MENU_CARLITOS = [
           'Roasted with green, red pepper and onions. Served with avocado green sauce, mexican sauce and rice',
         variantes: [
           {
-            nombre: 'Vegetariana*',
-            name: 'Vegetarian',
-            precio: 310,
-          },
-          {
             nombre: 'Pollo',
             name: 'Chicken',
             precio: 349,
@@ -341,27 +227,14 @@ export const MENU_CARLITOS = [
             precio: 479,
           },
           {
-            nombre: 'Mixto con Camarón',
-            name: 'Mixed with Shrimp',
+            nombre: 'Mixto',
+            name: 'Mixed',
             desc: 'Camarón, Arrachera, Pollo',
             descEng: 'Shrimp, Flank Steak, Chicken',
             precio: 459,
           },
-          {
-            nombre: 'Mixto',
-            name: 'Mixed',
-            desc: 'Arrachera, Pollo',
-            descEng: 'Flank Steak, Chicken',
-            precio: 359,
-          },
         ],
-      },
-    ],
-    notas: [
-      {
-        nombre:
-          '*Fajitas vegetarianas incluyen pimiento rojo y verde, cebolla morada, zanahoria, papa, calabazas, champiñones',
-        name: '*Vegetarian fajitas include red and green peppers, red onions, carrots, potatoes, zucchini, mushrooms.',
+        slug: 'fajitas',
       },
     ],
   },
@@ -372,37 +245,27 @@ export const MENU_CARLITOS = [
         nombre: 'Nuestros Tacos',
         desc: 'Acompañados de guacamole y pico de gallo (Orden de 4).',
         descEng: 'Served with guacamole and pico de gallo (Order of 4).',
+        slug: 'tacos-de-camaron',
         variantes: [
           {
             nombre: 'Pollo',
             name: 'Chicken',
-            precio: 230,
-            adicionales: [
-              { nombre: 'Con Queso', name: 'With Cheese', precio: 245 },
-            ],
+            precio: 245,
           },
           {
             nombre: 'Arrachera',
             name: 'Flank Steak',
-            precio: 260,
-            adicionales: [
-              { nombre: 'Con Queso', name: 'With Cheese', precio: 280 },
-            ],
+            precio: 280,
           },
           {
-            nombre: 'Chuleta',
-            name: 'Pork Chop',
-            precio: 200,
-            adicionales: [
-              { nombre: 'Con Queso', name: 'With Cheese', precio: 230 },
-            ],
+            nombre: 'Pescado Empanizado',
+            name: 'Breaded Fish',
+            precio: 249,
           },
           {
-            nombre: 'Alambre',
-            precio: 200,
-            adicionales: [
-              { nombre: 'Con Queso', name: 'With Cheese', precio: 230 },
-            ],
+            nombre: 'Camarón Empanizado',
+            name: 'Breaded Shrimp',
+            precio: 279,
           },
         ],
       },
@@ -443,14 +306,6 @@ export const MENU_CARLITOS = [
           'Parmesan chicken on a bed of pomodoro sauce. Served with spaghetti in tomato sauce.',
         precio: 279,
       },
-      {
-        nombre: 'Cordon Blue',
-        desc: 'Pechuga de pollo empanizada, rellena de jamón y queso sobre una cama de salsa pomodoro y puré de papa.',
-        descEng:
-          'Breaded chicken breast, stuffed with ham and cheese, tomato sauce and mashed potatoes.',
-        precio: 310,
-        slug: 'cordon-blue',
-      },
     ],
   },
   {
@@ -468,11 +323,6 @@ export const MENU_CARLITOS = [
             name: '2 People',
             precio: 910,
           },
-          {
-            nombre: '1 Persona',
-            name: '1 People',
-            precio: 480,
-          },
         ],
       },
       {
@@ -487,11 +337,6 @@ export const MENU_CARLITOS = [
             name: '2 People',
             precio: 1410,
           },
-          {
-            nombre: '1 Persona',
-            name: '1 People',
-            precio: 735,
-          },
         ],
       },
       {
@@ -505,11 +350,6 @@ export const MENU_CARLITOS = [
             nombre: '2 Personas',
             name: '2 People',
             precio: 1750,
-          },
-          {
-            nombre: '1 Persona',
-            name: '1 People',
-            precio: 850,
           },
         ],
       },
@@ -531,16 +371,12 @@ export const MENU_CARLITOS = [
         desc: 'Espagueti o fetuccini con quesos gouda, azul y parmesano.',
         descEng:
           'Spaghetti or fettuccini with gouda, blue and parmesan cheeses.',
+        precio: 330,
         variantes: [
           {
             nombre: 'Con Pollo',
             name: 'With Chicken',
-            precio: 330,
-          },
-          {
-            nombre: 'Con Camarón',
-            name: 'With Shrimp',
-            precio: 389,
+            precio: 350,
           },
         ],
       },
@@ -550,50 +386,50 @@ export const MENU_CARLITOS = [
         descEng:
           'Spaghetti or fettuccini with cream sauce and parmesan cheese.',
         precio: 330,
-      },
-      {
-        nombre: 'Lasaña Vegetariana',
-        name: 'Vegetarian Lasagna',
-        desc: 'Lasaña rellena de vegetales',
-        descEng: 'Lasagna stuffed with vegetables.',
-        precio: 290,
-      },
-      {
-        nombre: 'Marinera',
-        desc: 'Espagueti o fetuccini con salsa de tomates frescos, camarones y especias.',
-        descEng:
-          'Spaghetti or fettuccini with shrimps, tomato sauce and spices.',
-        precio: 499,
+        variantes: [
+          {
+            nombre: 'Con Pollo',
+            name: 'With Chicken',
+            precio: 350,
+          },
+        ],
       },
     ],
   },
   {
-    categoria: 'Burgers',
+    categoria: 'Snacks',
     items: [
       {
-        nombre: 'Tex Mex',
+        nombre: 'K-Burro Pollo',
+        name: 'Chicken K-Burro',
+        precio: 229,
+      },
+      {
+        nombre: 'K-Burro Arrachera',
+        name: 'Flank Steak K-Burro',
+        precio: 289,
+      },
+      {
+        nombre: 'Hamburguesa Tex Mex',
         desc: 'Piña, tocino y queso',
         descEng: 'Pineapple, bacon and cheese',
         precio: 250,
       },
       {
-        nombre: 'Doble Queso',
-        name: 'Double Cheese',
-        desc: 'Hamburguesa Doble Queso',
-        descEng: 'Double Cheese Burger',
-        precio: 270,
+        nombre: 'Hamburguesa Doble Queso',
+        name: 'Double Cheese Burger',
+        precio: 289,
+      },
+      {
+        nombre: "Hamburguesa Karen's",
+        name: "Karen's Burger",
+        precio: 189,
       },
     ],
   },
   {
     categoria: 'Pizzas',
     items: [
-      {
-        nombre: 'Napolitana',
-        desc: 'Tomate fresco y queso',
-        descEng: 'Tomato slices and cheese',
-        precio: 260,
-      },
       {
         nombre: 'Jamón',
         name: 'Ham',
@@ -609,22 +445,6 @@ export const MENU_CARLITOS = [
         precio: 260,
       },
       {
-        nombre: 'Vegetariana',
-        name: 'Vegetarian',
-        desc: 'Pimiento verde y rojo, calabaza, champiñones, jitomate, cebolla, zanahoria y queso',
-        descEng:
-          'Green and red pepper, zucchini, mushrooms, tomatoes, onion and cheese',
-        precio: 260,
-      },
-      {
-        nombre: '3 quesos',
-        name: '3 cheeses',
-        desc: 'Queso philadelphia, gouda, parmesano, salsa de tomate y orégano',
-        descEng:
-          'Philadelphia cheese, gouda, parmesan, tomato sauce and oregano',
-        precio: 270,
-      },
-      {
         nombre: 'Cozumel',
         desc: 'Jamón, salami y champiñones',
         descEng: 'Ham, salami and mushrooms',
@@ -634,18 +454,6 @@ export const MENU_CARLITOS = [
         nombre: 'Hawaiana',
         desc: 'Jamón, queso y piña',
         descEng: 'Ham, cheese and pineapple',
-        precio: 270,
-      },
-      {
-        nombre: 'Popeye',
-        desc: 'Queso gouda, queso philadelphia y espinaca',
-        descEng: 'Gouda cheese, philadelphia cheese and spinach',
-        precio: 270,
-      },
-      {
-        nombre: 'Salami',
-        desc: 'Queso y salami',
-        descEng: 'Cheese and salami',
         precio: 270,
       },
       {
@@ -659,6 +467,7 @@ export const MENU_CARLITOS = [
         desc: 'Chorizo, frijoles, tomate, cebolla y pimiento verde',
         descEng: 'Mexican sausage, beans, tomato, onion and green pepper',
         precio: 290,
+        slug: 'pizza-mexicana',
       },
       {
         nombre: 'Camarones',
@@ -667,16 +476,31 @@ export const MENU_CARLITOS = [
         descEng: 'Shrimp with garlic and cheese',
         precio: 410,
       },
+    ],
+  },
+  {
+    categoria: 'Postres',
+    category: 'Desserts',
+    items: [
       {
-        nombre: 'Caribeña',
-        desc: 'Camarones al mojo de ajo, atun, calamar y aceitunas',
-        descEng: 'Shrimp with garlic, tuna, squid and olives',
-        precio: 410,
+        nombre: 'Cheesecake',
+        desc: 'Servido con salsa de fresas',
+        descEng: 'Served with strawberry sauce',
+        precio: 120,
+        slug: 'cheesecake',
       },
       {
-        nombre: 'Atun con 3 quesos y aceitunas',
-        name: 'Tuna with three cheeses and olives',
-        precio: 270,
+        nombre: 'Flan de la casa',
+        precio: 110,
+        slug: 'flan',
+      },
+      {
+        nombre: 'Plátano flameado',
+        name: 'Banana Flambe',
+        desc: 'Flameado en su mesa, con brandy, mantequilla, licor de plátano, jugo de naranja y canela.\nServido con helado de vainilla.',
+        descEng:
+          'Flamed at your table, with brandy, butter, banana liqueur, orange juice and cinamon.\nServed with vanilla ice cream.',
+        precio: 170,
       },
     ],
   },
@@ -776,32 +600,6 @@ export const MENU_CARLITOS = [
       {
         nombre: 'Tarro Jumbo',
         precio: 250,
-      },
-    ],
-  },
-  {
-    categoria: 'Postres',
-    category: 'Desserts',
-    items: [
-      {
-        nombre: 'Cheesecake',
-        desc: 'Servido con salsa de fresas',
-        descEng: 'Served with strawberry sauce',
-        precio: 120,
-        slug: 'cheesecake',
-      },
-      {
-        nombre: 'Flan de la casa',
-        precio: 110,
-        slug: 'flan',
-      },
-      {
-        nombre: 'Plátano flameado',
-        name: 'Banana Flambe',
-        desc: 'Flameado en su mesa, con brandy, mantequilla, licor de plátano, jugo de naranja y canela.\nServido con helado de vainilla.',
-        descEng:
-          'Flamed at your table, with brandy, butter, banana liqueur, orange juice and cinamon.\nServed with vanilla ice cream.',
-        precio: 170,
       },
     ],
   },
