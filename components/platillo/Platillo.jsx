@@ -26,7 +26,7 @@ const Platillo = ({
       {slug ? (
         <CardMedia
           sx={{ height: 220 }}
-          image={`/images/karens-menu/${slug}.jpg`}
+          image={`/images/menu/${slug}.jpg`}
           title={nombre}
         />
       ) : (
