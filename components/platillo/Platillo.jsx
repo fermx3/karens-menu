@@ -1,4 +1,5 @@
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import PlatilloAdicionales from '../platillo-adicionales/PlatilloAdicionales';
 import PlatilloVariantes from '../platillo-variantes/PlatilloVariantes';
 
 import classes from './Platillo.module.scss';
@@ -14,18 +15,23 @@ const Platillo = ({
     variantes,
     adicionales,
   },
+  cardCarlitos,
 }) => {
   return (
-    <Card className={classes.card}>
+    <Card
+      className={
+        cardCarlitos ? `${classes.cardCarlitos}` : `${classes.cardKarens}`
+      }
+    >
       {slug ? (
         <CardMedia
-          sx={{ height: 140 }}
+          sx={{ height: 220 }}
           image={`/images/karens-menu/${slug}.jpg`}
           title={nombre}
         />
       ) : (
         <CardMedia
-          sx={{ height: 140 }}
+          sx={{ height: 220 }}
           image={`/images/karens-menu/placeholder.jpg`}
           title={nombre}
         />
@@ -35,21 +41,7 @@ const Platillo = ({
           <Typography variant='h5'>{nombre}</Typography>
           {name && <Typography variant='subtitle1'>{name}</Typography>}
         </div>
-        {adicionales &&
-          adicionales.map((adicional) => (
-            <div key={adicional.name} className={classes.adicionales}>
-              <Typography variant='subtitle2' sx={{ fontWeight: 400 }}>
-                {adicional.nombre}
-              </Typography>
-              <Typography variant='subtitle2' sx={{ fontWeight: 400 }}>
-                {adicional.name}
-              </Typography>
-              <Typography
-                sx={{ fontWeight: 500 }}
-                varian='button'
-              >{`$${adicional.precio}`}</Typography>
-            </div>
-          ))}
+        {adicionales && <PlatilloAdicionales adicionales={adicionales} />}
         {desc && (
           <div className={classes.body}>
             <Typography variant='body1'>{desc}</Typography>
@@ -60,7 +52,7 @@ const Platillo = ({
           <div className={classes.precio}>
             <Typography
               sx={{ fontWeight: 500 }}
-              varian='button'
+              variant='button'
             >{`$${precio}`}</Typography>
           </div>
         )}

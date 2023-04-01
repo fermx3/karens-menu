@@ -1,10 +1,14 @@
 import Category from '../category/Category';
 
-const Menu = ({ karensMenu }) => {
+const Menu = ({ menu, cardCarlitos }) => {
   return (
     <div>
-      {karensMenu.map((category) => (
-        <Category key={category.categoria} category={category} />
+      {menu.map((category) => (
+        <Category
+          key={category.categoria}
+          category={category}
+          cardCarlitos={cardCarlitos}
+        />
       ))}
     </div>
   );

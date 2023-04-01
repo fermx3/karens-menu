@@ -7,9 +7,14 @@ const Bebida = ({ bebida: { bebidaItems, subCategoria, subCategory } }) => {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography variant='h5'>{subCategoria}</Typography>
-        {subCategoria && (
-          <Typography variant='subtitle1' sx={{ marginTop: '-10px' }}>
+        <Typography variant='h5' sx={{ textTransform: 'uppercase' }}>
+          {subCategoria}
+        </Typography>
+        {subCategory && (
+          <Typography
+            variant='subtitle1'
+            sx={{ marginTop: '-10px', textTransform: 'uppercase' }}
+          >
             {subCategory}
           </Typography>
         )}

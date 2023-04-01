@@ -12,6 +12,7 @@ import classes from './Category.module.scss';
 
 const Category = ({
   category: { categoria, category, items, notas, bebidas },
+  cardCarlitos,
 }) => {
   return (
     <div id={categoria} className={classes.categoria}>
@@ -24,7 +25,11 @@ const Category = ({
         )}
       </Paper>
       <div className={classes.categoriaItems}>
-        <CategoryItems items={items} bebidas={bebidas} />
+        <CategoryItems
+          items={items}
+          bebidas={bebidas}
+          cardCarlitos={cardCarlitos}
+        />
       </div>
       {notas && (
         <div className={classes.notas}>

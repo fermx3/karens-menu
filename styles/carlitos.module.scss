@@ -1,0 +1,20 @@
+.main {
+  background: url('/images/fondo-carlitos.png'),
+    linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-y: bottom;
+
+  h1,
+  h2,
+  h4 {
+    color: #633b1a;
+  }
+}
+
+@media (width < 1024px) {
+  .main {
+    background-size: contain;
+  }
+}

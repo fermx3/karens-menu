@@ -1,7 +1,5 @@
-import { MENU_KARENS } from '@/data/menu';
-
-export const getMenuCategories = () => {
-  const categories = MENU_KARENS.map((item) => {
+export const getMenuCategories = (menu) => {
+  const categories = menu.map((item) => {
     if (item.hasOwnProperty('category')) {
       return {
         categoria: item.categoria,

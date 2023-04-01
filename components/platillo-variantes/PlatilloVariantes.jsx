@@ -1,4 +1,5 @@
 import { Paper, Typography } from '@mui/material';
+import PlatilloAdicionales from '../platillo-adicionales/PlatilloAdicionales';
 
 import classes from './PlatilloVariantes.module.scss';
 
@@ -14,7 +15,7 @@ const PlatilloVariantes = ({ variantes }) => {
         >
           <div>
             <Typography variant='h6'>{variante.nombre}</Typography>
-            <Typography varian='subtitle1'>{variante.name}</Typography>
+            <Typography variant='subtitle1'>{variante.name}</Typography>
           </div>
           {variante.desc && (
             <div>
@@ -24,6 +25,9 @@ const PlatilloVariantes = ({ variantes }) => {
           )}
           <div>
             <Typography variant='button'>{`$${variante.precio}`}</Typography>
+            {variante.adicionales && (
+              <PlatilloAdicionales adicionales={variante.adicionales} />
+            )}
           </div>
         </div>
       ))}

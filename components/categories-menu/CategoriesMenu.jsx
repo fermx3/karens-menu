@@ -1,9 +1,11 @@
 import { Button } from '@mui/material';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import classes from './CategoriesMenu.module.scss';
 
 const CategoriesMenu = ({ menuCategories }) => {
+  const { route } = useRouter();
+
   return (
     <nav className={classes.navBar}>
       <ul>
@@ -12,7 +14,7 @@ const CategoriesMenu = ({ menuCategories }) => {
             <Button
               sx={{ height: '45px' }}
               variant='contained'
-              href={`/#${category.categoria}`}
+              href={`${route}#${category.categoria}`}
             >
               <h3>{category.categoria}</h3>
               {category.category && (

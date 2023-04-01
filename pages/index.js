@@ -1,14 +1,16 @@
 import Head from 'next/head';
-import { MENU_KARENS } from '../data/menu';
-import Header from '@/components/header/Header';
+import { MENU_KARENS } from '../data/karens-menu';
 import { getMenuCategories } from '@/utils/db-utils';
+
+import Header from '@/components/header/Header';
 import Menu from '@/components/menu/Menu';
-import { IconButton, Typography } from '@mui/material';
-import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+import Footer from '@/components/footer/Footer';
+
+import classes from '/styles/karens.module.scss';
 
 export default function Home({ karensMenuCategories, karensMenu }) {
   return (
-    <>
+    <div className={classes.main}>
       <Head>
         <title>Karen&apos;s Menu | Playa del Carmen</title>
         <meta
@@ -21,33 +23,20 @@ export default function Home({ karensMenuCategories, karensMenu }) {
       <Header
         subtitle='Menú'
         title='Playa del Carmen'
+        logo='karens-logo.png'
         menuCategories={karensMenuCategories}
+        whiteSubtitle
       />
       <main>
-        <Menu karensMenu={karensMenu} />
-        <IconButton
-          href='/'
-          sx={{ position: 'fixed', bottom: '10px', right: '10px' }}
-          aria-label='regresar al inicio'
-          size='large'
-        >
-          <ArrowCircleUpIcon color='white' />
-        </IconButton>
+        <Menu menu={karensMenu} />
       </main>
-      <footer style={{ textAlign: 'center', color: 'aliceblue' }}>
-        <Typography variant='overline' style={{ display: 'block' }}>
-          Todos nuestros precios están en pesos mexicanos MXN
-        </Typography>
-        <Typography variant='overline'>
-          All of our prices are in Mexican Pesos MXN
-        </Typography>
-      </footer>
-    </>
+      <Footer />
+    </div>
   );
 }
 
 export const getStaticProps = () => {
-  const categories = getMenuCategories();
+  const categories = getMenuCategories(MENU_KARENS);
 
   return {
     props: {

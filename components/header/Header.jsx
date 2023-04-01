@@ -1,18 +1,22 @@
 import { Typography } from '@mui/material';
 import Image from 'next/image';
 import CategoriesMenu from '../categories-menu/CategoriesMenu';
-import MobileMenu from '../mobile-menu/MobileMenu';
 
 import classes from './Header.module.scss';
 
-const Header = ({ title, subtitle, menuCategories }) => {
+const Header = ({ title, subtitle, logo, menuCategories, whiteSubtitle }) => {
   return (
     <header className={classes.header}>
       <div className={classes.img}>
-        <Image src='/images/karens-logo.png' alt='karens logo' fill />
+        <Image src={`/images/${logo}`} alt='karens logo' fill priority />
       </div>
       <div className={classes.headerTitle}>
-        <Typography variant='subtitle1' sx={{ color: 'white' }}>
+        <Typography
+          variant='subtitle1'
+          className={
+            whiteSubtitle ? `${classes.whiteSubtitle}` : `${classes.subtitle}`
+          }
+        >
           {subtitle}
         </Typography>
         <Typography variant='h2' component='h1'>
@@ -20,7 +24,6 @@ const Header = ({ title, subtitle, menuCategories }) => {
         </Typography>
       </div>
       <CategoriesMenu menuCategories={menuCategories} />
-      {/* <MobileMenu /> */}
     </header>
   );
 };

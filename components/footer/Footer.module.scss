@@ -1,0 +1,46 @@
+.footer {
+  color: aliceblue;
+  text-align: center;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0.8rem 0.5rem;
+
+  p {
+    margin: 0;
+    line-height: unset;
+
+    &:first-child {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (width < 480px) {
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 0.5rem 0.8rem 1.5rem;
+
+    a {
+      position: unset;
+    }
+
+    p {
+      font-size: 0.75rem;
+      text-align: left;
+    }
+  }
+}
