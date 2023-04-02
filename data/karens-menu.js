@@ -326,6 +326,7 @@ export const MENU_KARENS = [
             precio: 415,
           },
         ],
+        slug: 'molcajete',
       },
     ],
   },
@@ -439,6 +440,7 @@ export const MENU_KARENS = [
         descEng:
           'Tortillas filled with shredded chicken, covered in a green sauce and grated melted cheese',
         precio: 289,
+        slug: 'enchiladas-suizas',
       },
     ],
   },

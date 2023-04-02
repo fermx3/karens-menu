@@ -8,12 +8,40 @@
   margin: 4rem auto;
 
   .header {
-    background: transparent;
     text-align: center;
+    background: url(/images/letrero.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: min(450px, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+
+    h4 {
+      color: #f8f9e0;
+      filter: drop-shadow(2px 4px 6px black);
+      max-width: 320px;
+      margin: 0 auto;
+    }
 
     .titleEng {
       font-size: large;
     }
+
+    // &::after {
+    //   content: '';
+    //   width: 350px;
+    //   height: 250px;
+    //   background: url(/images/letrero.png);
+    //   background-repeat: no-repeat;
+    //   position: absolute;
+    //   bottom: -100px;
+    //   left: 40%;
+    //   right: 50%;
+    // }
   }
 
   .categoriaItems {
@@ -25,6 +53,8 @@
     display: flex;
     width: 90vw;
     padding: 0 1rem;
+    justify-content: center;
+    width: 100%;
     span {
       display: inline-block;
       width: 100%;

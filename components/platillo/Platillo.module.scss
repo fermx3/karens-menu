@@ -1,6 +1,8 @@
 .cardKarens {
   position: relative;
   background: url('/images/card-background.jpg');
+  width: 100%;
+  max-width: 600px;
 
   .header,
   .body {
