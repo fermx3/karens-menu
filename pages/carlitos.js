@@ -21,6 +21,7 @@ export default function CarlitosMenu({ carlitosMenuCategories, carlitosMenu }) {
         subtitle='Menú'
         title='Restaurante Tulum'
         logo='LogoCarlitosTulum.png'
+        website='https://hotelcarlitostulum.com/'
         menuCategories={carlitosMenuCategories}
       />
       <main>

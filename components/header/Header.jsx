@@ -4,11 +4,20 @@ import CategoriesMenu from '../categories-menu/CategoriesMenu';
 
 import classes from './Header.module.scss';
 
-const Header = ({ title, subtitle, logo, menuCategories, whiteSubtitle }) => {
+const Header = ({
+  title,
+  subtitle,
+  logo,
+  website,
+  menuCategories,
+  whiteSubtitle,
+}) => {
   return (
     <header className={classes.header}>
       <div className={classes.img}>
-        <Image src={`/images/${logo}`} alt='karens logo' fill priority />
+        <a href={website}>
+          <Image src={`/images/${logo}`} alt='karens logo' fill priority />
+        </a>
       </div>
       <div className={classes.headerTitle}>
         <Typography

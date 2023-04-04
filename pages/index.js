@@ -24,6 +24,7 @@ export default function Home({ karensMenuCategories, karensMenu }) {
         subtitle='Menú'
         title='Playa del Carmen'
         logo='karens-logo.png'
+        website='https://karensrestaurante.com/'
         menuCategories={karensMenuCategories}
         whiteSubtitle
       />

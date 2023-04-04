@@ -21,6 +21,7 @@ export default function TulumMenu({ karensMenuCategories, karensMenu }) {
         subtitle='Menú'
         title='Tulum'
         logo='karens-logo.png'
+        website='https://karensrestaurante.com/'
         menuCategories={karensMenuCategories}
         whiteSubtitle
       />
